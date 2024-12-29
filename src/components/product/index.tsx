@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Product } from '../../types/product'
 import { formatCurrency } from '../../utils/currency'
-import DiscountBadge from '../../assets/DiscountBadge'
+import DiscountBadge from './DiscountBadge'
 import {
   HeartIcon,
   ShoppingCartIcon,
