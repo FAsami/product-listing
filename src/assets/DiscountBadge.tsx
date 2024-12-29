@@ -1,8 +1,9 @@
 const DiscountBadge = ({ text }: { text: string }) => {
+  const width = 26 + text.length * 6
   return (
     <div className="inline-flex items-center relative">
       <svg
-        width="65"
+        width={width}
         height="30"
         viewBox="0 0 65 30"
         fill="none"
@@ -49,7 +50,7 @@ const DiscountBadge = ({ text }: { text: string }) => {
           </linearGradient>
         </defs>
       </svg>
-      <div className="text-white text-xs font-medium absolute left-2 top-1/2 -translate-y-1/2 whitespace-nowrap">
+      <div className="text-white text-xs font-medium whitespace-nowrap absolute left-2 top-1">
         {text}
       </div>
     </div>

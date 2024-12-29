@@ -27,6 +27,7 @@ type CartContextType = {
   cartItems: CartItem[]
   favourites: number[]
   cartTotal: number
+  numberOfItems: number
 }
 
 const initialState: CartState = {
@@ -104,6 +105,10 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
 
   const cartItems = state.items
   const favourites = state.favourites
+  const numberOfItems = state.items.reduce(
+    (total, item) => total + item.quantity,
+    0
+  )
   const cartTotal = state.items.reduce(
     (total, item) => total + item.product.price * item.quantity,
     0
@@ -141,6 +146,7 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
         cartItems,
         favourites,
         cartTotal,
+        numberOfItems,
       }}
     >
       {children}

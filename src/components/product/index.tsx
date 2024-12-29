@@ -110,7 +110,12 @@ const ProductCard = ({ product }: { product: Product }) => {
           <div className="text-brand-dark-700 text-sm first-letter:capitalize">
             {category}
           </div>
-          <div className="text-brand-dark-900 text-base font-575">{title}</div>
+          <div
+            title={title}
+            className="text-brand-dark-900 text-base font-575 max-h-12 overflow-hidden text-ellipsis line-clamp-2"
+          >
+            {title}
+          </div>
           <div className="flex gap-2 items-center">
             <div className="text-brand-primary-500 text-xl font-475">
               {price.afterDiscount}
