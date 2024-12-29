@@ -1,10 +1,11 @@
 import ProductCard from '../components/product'
+import { ProductSkeleton } from '../components/ProductSkeleton'
 import { useProducts } from '../hooks/products'
 
 const Products = () => {
   const { data: products, isLoading, error } = useProducts()
   console.log(products)
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading) return <ProductSkeleton />
   if (error)
     return <div className="text-neutral-700">Error: {error.message}</div>
 
