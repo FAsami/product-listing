@@ -6,12 +6,15 @@ import App from './App'
 import './index.css'
 import { queryClient } from './providers/query'
 import { BrowserRouter } from 'react-router-dom'
+import { CartProvider } from './providers/cart'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
-        <App />
+        <CartProvider>
+          <App />
+        </CartProvider>
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </BrowserRouter>
