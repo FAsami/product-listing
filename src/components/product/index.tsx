@@ -2,11 +2,7 @@ import { useMemo } from 'react'
 import { Product } from '../../types/product'
 import { formatCurrency } from '../../utils/currency'
 import DiscountBadge from '../../assets/DiscountBadge'
-import {
-  ShoppingCartIcon,
-  EyeIcon,
-  HeartIcon,
-} from '@heroicons/react/24/outline'
+import { HeartIcon, ShoppingCartIcon, EyeIcon } from '../../assets/icons'
 
 const ProductCard = ({ product }: { product: Product }) => {
   const {
@@ -33,7 +29,7 @@ const ProductCard = ({ product }: { product: Product }) => {
     <div className="relative group">
       <div className="absolute top-3 right-3 z-10">
         <button className="p-2 rounded-full bg-white hover:bg-gray-100 transition-colors">
-          <HeartIcon className="w-5 h-5 text-gray-600" />
+          <HeartIcon />
         </button>
       </div>
 
@@ -51,11 +47,11 @@ const ProductCard = ({ product }: { product: Product }) => {
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-30 transition-all duration-300"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
           <button className="bg-white text-gray-800 px-8 py-2 rounded-md w-[80%] hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
-            <ShoppingCartIcon className="w-5 h-5" />
+            <ShoppingCartIcon />
             Add to Cart
           </button>
           <button className="bg-white text-gray-800 px-8 py-2 rounded-md w-[80%] hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
-            <EyeIcon className="w-5 h-5" />
+            <EyeIcon />
             Quick View
           </button>
         </div>
