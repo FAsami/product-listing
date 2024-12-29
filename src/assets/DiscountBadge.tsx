@@ -2,7 +2,7 @@ const DiscountBadge = ({ text }: { text: string }) => {
   return (
     <div className="inline-flex items-center relative">
       <svg
-        width="auto"
+        width="65"
         height="30"
         viewBox="0 0 65 30"
         fill="none"
@@ -33,8 +33,8 @@ const DiscountBadge = ({ text }: { text: string }) => {
             className="w-auto h-auto"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FFA03B" />
-            <stop offset="1" stop-color="#F27D00" />
+            <stop stopColor="#FFA03B" />
+            <stop offset="1" stopColor="#F27D00" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_260_253"
@@ -44,8 +44,8 @@ const DiscountBadge = ({ text }: { text: string }) => {
             y2="24"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F7B166" />
-            <stop offset="1" stop-color="#D66F00" />
+            <stop stopColor="#F7B166" />
+            <stop offset="1" stopColor="#D66F00" />
           </linearGradient>
         </defs>
       </svg>
